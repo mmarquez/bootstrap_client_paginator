@@ -1,0 +1,28 @@
+.pager{}
+.pager div.short{
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    width: 74px;
+}
+.pager ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-right: 4px;
+}
+.pager ul li{
+    display: inline;
+    margin-left: 2px;
+}
+.pager span{
+    padding: 0 .25rem;
+}
+.pager input{
+    width:auto;
+}
+.pager .btn-primary{
+    margin-top:0;
+}
