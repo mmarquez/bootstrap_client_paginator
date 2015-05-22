@@ -26,7 +26,7 @@
                 var totalpages = parseInt(settings.totalrecords / settings.recordsperpage);
                 if (settings.totalrecords % settings.recordsperpage > 0) totalpages++;
                 var initialized = false;
-                var container = $(this).addClass('pager').addClass('row');
+                var container = $(this).addClass('pager row');
                 container.find('ul').remove();
                 container.find('div').remove();
                 container.find('span').remove();
@@ -48,7 +48,7 @@
                         if (!(value > 0 && value <= totalpages)) e.preventDefault();
                     } else if (!(e.which == 8 || e.which == 46)) e.preventDefault();
                 });
-                var btnGo = $('<input/>').attr('type', 'button').addClass('col-md-3 btn btn-' + settings.goClass).attr('value', settings.go).addClass('btn').click(function () { if (inputPage.val() == '') return false; else { currentPage = parseInt(inputPage.val()) - 1; navigate(currentPage); } });
+                var btnGo = $('<input/>').attr('type', 'button').addClass('col-md-3 btn btn-' + settings.goClass).attr('value', settings.go).click(function () { if (inputPage.val() == '') return false; else { currentPage = parseInt(inputPage.val()) - 1; navigate(currentPage); } });
                 container.append(btnFirst).append(btnPrev).append(list).append(btnNext).append(btnLast).append($('<div/>').addClass('pull-right').append(inputPage).append(btnGo));
                 if (settings.display == 'single') {
                     btnGo.css('display', 'none');
@@ -75,7 +75,7 @@
                     for (var i = startPage; i < startPage + settings.length; i++) {
                         if (i == totalpages) break;
                         list.append($('<li/>')
-                                    .append($('<a>').attr('id', (i + 1)).addClass('btn').addClass('btn-' + settings.theme).addClass('normal')
+                                    .append($('<a>').attr('id', (i + 1)).addClass('btn btn-' + settings.theme)
                                     .attr('href', 'javascript:void(0)')
                                     .text(i + 1))
                                     .click(function () {
